@@ -1,0 +1,1324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏝️ ЛОМБОК И ГИЛИ — Полный гид для медового месяца 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 60px rgba(0,0,0,0.3);
+        }
+        
+        /* ОБЛОЖКА */
+        .cover-page {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1537996158492-e88b3481d11c?w=1200');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 40px;
+        }
+        .cover-page h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease;
+        }
+        .cover-page .subtitle {
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease;
+        }
+        .cover-info {
+            background: rgba(255,255,255,0.2);
+            padding: 30px 50px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 1.5s ease;
+        }
+        .cover-info span {
+            display: inline-block;
+            margin: 10px 25px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .start-btn {
+            margin-top: 40px;
+            background: white;
+            color: #667eea;
+            padding: 18px 50px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2em;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            display: inline-block;
+        }
+        .start-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* НАВИГАЦИЯ */
+        .nav-menu {
+            background: #f8f9fa;
+            padding: 20px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: #667eea;
+            padding: 8px 16px;
+            border-radius: 20px;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        .nav-menu a:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* КОНТЕНТ */
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 80px;
+            scroll-margin-top: 100px;
+        }
+        .section h2 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #667eea;
+        }
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin: 30px 0 15px;
+        }
+        .section h4 {
+            color: #555;
+            font-size: 1.3em;
+            margin: 20px 0 10px;
+        }
+
+        /* КАРТОЧКИ */
+        .card {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 0 10px 10px 0;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .card.pros { border-left-color: #28a745; background: #f0fff4; }
+        .card.cons { border-left-color: #dc3545; background: #fff5f5; }
+
+        /* ТАБЛИЦЫ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background: #667eea;
+            color: white;
+            font-weight: 600;
+        }
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        tr:hover {
+            background: #e9ecef;
+        }
+
+        /* КАЛЬКУЛЯТОР */
+        .calc-form {
+            background: #f0f4ff;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        .calc-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+        }
+        .calc-result {
+            display: none;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border: 3px solid #667eea;
+        }
+
+        /* ЧЕК-ЛИСТ */
+        .timeline-section {
+            margin-bottom: 25px;
+            border: 2px solid #e0e0e0;
+            border-radius: 15px;
+            padding: 20px;
+            background: #fafafa;
+        }
+        .timeline-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: #764ba2;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .timeline-header span {
+            font-size: 1.5em;
+            margin-right: 10px;
+        }
+        .checklist-item {
+            display: flex;
+            align-items: flex-start;
+            margin: 12px 0;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .checklist-item:hover {
+            background: #f0f4ff;
+            transform: translateX(5px);
+        }
+        .checklist-item input[type="checkbox"] {
+            margin-right: 15px;
+            margin-top: 4px;
+            transform: scale(1.3);
+            accent-color: #667eea;
+        }
+        .checklist-item label {
+            cursor: pointer;
+            flex: 1;
+            line-height: 1.4;
+        }
+        .checklist-item input:checked + label {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        /* ГАСТРО И ЛАЙФХАКИ */
+        .food-grid, .hack-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .food-card, .hack-card {
+            background: #fff5f7;
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 5px solid #f5576c;
+            transition: transform 0.3s;
+        }
+        .food-card:hover, .hack-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .food-card h4, .hack-card h4 {
+            color: #f5576c;
+            margin-bottom: 10px;
+        }
+
+        /* ШАБЛОНЫ */
+        .email-template {
+            background: #f0fdf4;
+            border: 2px solid #bbf7d0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+        .email-template pre {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: monospace;
+            font-size: 0.95em;
+            line-height: 1.6;
+            border: 1px solid #e5e7eb;
+        }
+
+        /* ИЗОБРАЖЕНИЯ */
+        .image-container {
+            margin: 30px 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        .image-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        /* КНОПКИ */
+        .action-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(118, 75, 162, 0.5);
+        }
+
+        /* СПИСКИ */
+        .check-list li {
+            list-style: none;
+            padding-left: 30px;
+            position: relative;
+            margin: 8px 0;
+        }
+        .check-list li:before {
+            content: "✅";
+            position: absolute;
+            left: 0;
+        }
+
+        /* ВЫДЕЛЕНИЯ */
+        .highlight-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-weight: 600;
+        }
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+        }
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid #28a745;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+        }
+        .info-box {
+            background: #d1ecf1;
+            border-left: 5px solid #17a2b8;
+            padding: 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 20px 0;
+        }
+
+        /* РЕЙТИНГИ */
+        .rating-table {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .rating-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 20px;
+            border-bottom: 1px solid #eee;
+            align-items: center;
+        }
+        .rating-row:last-child {
+            border-bottom: none;
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        .rating-score {
+            background: #667eea;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        .rating-row:last-child .rating-score {
+            background: white;
+            color: #667eea;
+        }
+
+        /* ССЫЛКИ СПИСОК */
+        .links-list {
+            list-style: none;
+            line-height: 2.2;
+        }
+        .links-list a {
+            color: #667eea;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .links-list a:hover {
+            color: #764ba2;
+            text-decoration: underline;
+        }
+
+        /* QR КОДЫ */
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .qr-card {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+            margin: 0 auto 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        /* ФУТЕР */
+        .footer {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+        }
+
+        /* АНИМАЦИИ */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* ПЕЧАТЬ */
+        @media print {
+            body { background: white; }
+            .main-container { box-shadow: none; }
+            .cover-page { height: 100vh; page-break-after: always; }
+            .nav-menu, .start-btn, .action-btn, .footer { display: none; }
+            .section { page-break-inside: avoid; }
+        }
+        @media (max-width: 768px) {
+            .cover-page h1 { font-size: 2.5em; }
+            .form-row { grid-template-columns: 1fr; }
+            .nav-menu ul { flex-direction: column; }
+            .content { padding: 20px; }
+            .section h2 { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- ОБЛОЖКА -->
+        <div class="cover-page">
+            <h1>️ ЛОМБОК И ГИЛИ</h1>
+            <div class="subtitle">Полный интерактивный гид для медового месяца</div>
+            <div class="cover-info">
+                <span>📅 Сентябрь 2026</span>
+                <span>👥 2 человека</span>
+                <span>⏱️ 10 дней</span>
+                <span>💰 250-290 тыс. сом</span>
+            </div>
+            <a href="#intro" class="start-btn">Начать путешествие →</a>
+        </div>
+
+        <!-- НАВИГАЦИЯ -->
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#intro">📖 О гиде</a></li>
+                <li><a href="#budget">💰 Бюджет</a></li>
+                <li><a href="#logistics">️ Логистика</a></li>
+                <li><a href="#hotels"> Отели</a></li>
+                <li><a href="#route">📅 Маршрут</a></li>
+                <li><a href="#checklist">✅ Чек-лист</a></li>
+                <li><a href="#food">🍜 Еда</a></li>
+                <li><a href="#romantic">💑 Романтика</a></li>
+                <li><a href="#transport">🚗 Транспорт</a></li>
+                <li><a href="#medical">🏥 Аптечка</a></li>
+                <li><a href="#links">🔗 Ссылки</a></li>
+                <li><a href="#templates">✉️ Шаблоны</a></li>
+                <li><a href="#hacks">💡 Лайфхаки</a></li>
+                <li><a href="#contacts">📞 Контакты</a></li>
+            </ul>
+        </nav>
+
+        <!-- КОНТЕНТ -->
+        <div class="content">
+            <!-- ВВЕДЕНИЕ -->
+            <div class="section" id="intro">
+                <h2>📖 ПОЧЕМУ ЛОМБОК И ГИЛИ?</h2>
+                
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1537996158492-e88b3481d11c?w=800" alt="Pink Beach Lombok">
+                    <div class="image-caption">Pink Beach — один из 7 розовых пляжей мира</div>
+                </div>
+
+                <p style="font-size: 1.2em; line-height: 1.8; margin: 20px 0;">
+                    Ломбок — это <strong>спокойный и аутентичный брат Бали</strong> без толп туристов. 
+                    Острова Гили — <strong>классика райского острова</strong> без машин, с белоснежным песком 
+                    и кристально чистой водой.
+                </p>
+
+                <div class="card pros">
+                    <h4>✅ ПРЕИМУЩЕСТВА:</h4>
+                    <ul class="check-list">
+                        <li>Идеальная погода в сентябре (сухой сезон)</li>
+                        <li>Потрясающие белые пляжи и розовый песок</li>
+                        <li>Высокий уровень романтики и уединения</li>
+                        <li>Отличный снорклинг с черепахами</li>
+                        <li>Вкусная и недорогая еда</li>
+                        <li>Нет толп туристов</li>
+                    </ul>
+                </div>
+
+                <div class="card cons">
+                    <h4>⚠️ НЕДОСТАТКИ:</h4>
+                    <ul>
+                        <li>Долгий перелет (20+ часов)</li>
+                        <li>Нет прямых рейсов</li>
+                        <li>Нужен транспорт для перемещений</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <strong>🌤️ СЕНТЯБРЬ — СУХОЙ СЕЗОН!</strong><br>
+                    Это один из ЛУЧШИХ месяцев для посещения! Дожди редкие, море спокойное, 
+                    видимость под водой максимальная.
+                </div>
+            </div>
+
+            <!-- КАЛЬКУЛЯТОР БЮДЖЕТА -->
+            <div class="section" id="budget">
+                <h2>💰 ИНТЕРАКТИВНЫЙ КАЛЬКУЛЯТОР БЮДЖЕТА</h2>
+                
+                <div class="info-box" style="margin-bottom: 20px;">
+                    <h4>💱 АКТУАЛЬНЫЙ КУРС ВАЛЮТ</h4>
+                    <div style="background: white; padding: 15px; border-radius: 8px; margin: 10px 0;">
+                        <strong>1 USD = </strong> <span id="usdRate">87.00</span> <strong>KGS (сом)</strong><br>
+                        <strong>1 USD = </strong> <span id="idrRate">15,500</span> <strong>IDR (рупии)</strong><br>
+                        <small style="color: #666;">*Курс примерный. Актуальный курс: <a href="https://www.xe.com/" target="_blank">xe.com</a></small>
+                    </div>
+                </div>
+
+                <div class="calc-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Количество дней:</label>
+                            <input type="number" id="days" value="10" min="5" max="30">
+                        </div>
+                        <div class="form-group">
+                            <label>Стоимость перелета на двоих (сом):</label>
+                            <input type="number" id="flight" value="140000">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Стоимость отеля за ночь (USD):</label>
+                            <input type="number" id="hotelPerNight" value="80">
+                        </div>
+                        <div class="form-group">
+                            <label>Питание в день на двоих (USD):</label>
+                            <input type="number" id="foodPerDay" value="40">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>Транспорт и экскурсии (USD):</label>
+                            <input type="number" id="transport" value="300">
+                        </div>
+                        <div class="form-group">
+                            <label>Доп. расходы (USD):</label>
+                            <input type="number" id="extras" value="100">
+                        </div>
+                    </div>
+                    <button class="calc-btn" onclick="calculateBudget()">Рассчитать бюджет</button>
+                    
+                    <div class="calc-result" id="resultBox">
+                        <h3> Ваш расчет:</h3>
+                        <div id="resultDetails"></div>
+                        <div class="highlight-box" id="totalResult"></div>
+                    </div>
+                </div>
+
+                <h3>📊 ПРИМЕРНЫЙ БЮДЖЕТ (на двоих, 10 дней)</h3>
+                <table>
+                    <thead>
+                        <tr><th>Расходы</th><th>Эконом</th><th>Комфорт</th><th>Премиум</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Перелет</td><td>130 000 сом</td><td>150 000 сом</td><td>180 000 сом</td></tr>
+                        <tr><td>Отели (9 ночей)</td><td>45 000 сом</td><td>75 000 сом</td><td>120 000 сом</td></tr>
+                        <tr><td>Питание</td><td>20 000 сом</td><td>35 000 сом</td><td>60 000 сом</td></tr>
+                        <tr><td>Транспорт</td><td>15 000 сом</td><td>22 000 сом</td><td>35 000 сом</td></tr>
+                        <tr><td>Развлечения</td><td>10 000 сом</td><td>20 000 сом</td><td>40 000 сом</td></tr>
+                        <tr style="background:#667eea;color:white;font-weight:bold;">
+                            <td>ИТОГО</td><td>240 000 сом</td><td>332 000 сом</td><td>480 000 сом</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ЛОГИСТИКА -->
+            <div class="section" id="logistics">
+                <h2>✈️ ЛОГИСТИКА И ПЕРЕЛЕТЫ</h2>
+                
+                <div class="card">
+                    <h3>🥇 ВАРИАНТ 1: Через Стамбул (РЕКОМЕНДУЕМ)</h3>
+                    <p><strong>Маршрут:</strong> Бишкек → Стамбул → Бали → Ломбок</p>
+                    <ul>
+                        <li>Turkish Airlines: FRU → IST → DPS (14 часов прямой рейс!)</li>
+                        <li>Внутренний рейс: DPS → LOP (45 мин, $50-80)</li>
+                        <li>✅ Единый билет, багаж до конечной</li>
+                    </ul>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.turkishairlines.com/" target="_blank" class="action-btn">✈️ Turkish Airlines</a>
+                        <a href="https://www.skyscanner.net/" target="_blank" class="action-btn">🔍 Skyscanner</a>
+                    </div>
+                </div>
+
+                <h3>🚤 РАСПИСАНИЕ ПАРОМОВ (Бангсал ↔ Гили)</h3>
+                <table>
+                    <thead>
+                        <tr><th>Маршрут</th><th>Первый рейс</th><th>Последний рейс</th><th>Интервал</th><th>Цена</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Бангсал → Гили Т</td><td>08:00</td><td>16:00</td><td>Каждые 30 мин</td><td>$10</td></tr>
+                        <tr><td>Гили Т → Бангсал</td><td>08:00</td><td>16:30</td><td>Каждые 30 мин</td><td>$10</td></tr>
+                        <tr><td>Бангсал → Гили Мено</td><td>08:00</td><td>16:00</td><td>Каждые 30 мин</td><td>$8</td></tr>
+                        <tr><td>Бангсал → Гили Аир</td><td>08:00</td><td>16:00</td><td>Каждые 30 мин</td><td>$8</td></tr>
+                    </tbody>
+                </table>
+                <div class="info-box">
+                    <strong>💡 Совет:</strong> Быстрые катера (Fast Boat) ходят до 17:00, цена $15-20. 
+                    <a href="https://www.12go.asia/" target="_blank">Бронировать онлайн</a>
+                </div>
+
+                <h3>🚤 ВНУТРЕННИЙ ТРАНСПОРТ</h3>
+                <table>
+                    <thead>
+                        <tr><th>Маршрут</th><th>Время</th><th>Цена</th><th>Ссылка</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Бали → Ломбок (самолет)</td><td>45 мин</td><td>$50-80</td><td><a href="https://www.batikair.com/" target="_blank">Batik Air</a></td></tr>
+                        <tr><td>Бали → Ломбок (катер)</td><td>2-3 часа</td><td>$30-50</td><td><a href="https://www.12go.asia/" target="_blank">12Go Asia</a></td></tr>
+                        <tr><td>Порт Бангсал → Гили Т</td><td>30 мин</td><td>$10</td><td>На месте</td></tr>
+                        <tr><td>Между Гили</td><td>15-30 мин</td><td>$10-15</td><td>На месте</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- ОТЕЛИ -->
+            <div class="section" id="hotels">
+                <h2>🏨 ЛУЧШИЕ ОТЕЛИ С ССЫЛКАМИ</h2>
+                
+                <h3>⭐⭐⭐ 3 ЗВЕЗДЫ</h3>
+                <div class="card">
+                    <h4>🏨 QUNCI VILLAS MENTARI (Сенгиги)</h4>
+                    <p><strong>Цена:</strong> ~$60/ночь<br>
+                    <strong>Плюсы:</strong> Красивая территория, отличный бассейн, вкусные завтраки<br>
+                    <strong>Минусы:</strong> До пляжа нужно спускаться по лестнице</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.booking.com/hotel/id/qunci-villas-mentari.html" target="_blank" class="action-btn"> Booking.com</a>
+                        <a href="https://www.agoda.com/qunci-villas-mentari/hotel/lombok-id.html" target="_blank" class="action-btn"> Agoda</a>
+                        <a href="https://goo.gl/maps/QunciVillas" target="_blank" class="action-btn">️ На карте</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h4>🏨 THE JUKUNG BOUTIQUE VILLAS (Гили Аир)</h4>
+                    <p><strong>Цена:</strong> ~$70/ночь<br>
+                    <strong>Плюсы:</strong> Уютно, прямо на пляже, бамбуковые бунгало</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.booking.com/hotel/id/the-jukung-boutique-villas.html" target="_blank" class="action-btn">📅 Booking.com</a>
+                        <a href="https://www.agoda.com/the-jukung-boutique-villas/hotel/gili-air-id.html" target="_blank" class="action-btn">🏨 Agoda</a>
+                        <a href="https://goo.gl/maps/TheJukung" target="_blank" class="action-btn">🗺️ На карте</a>
+                    </div>
+                </div>
+
+                <h3>⭐⭐⭐⭐ 4 ЗВЕЗДЫ</h3>
+                <div class="card">
+                    <h4>🏨 OMBAK SUNSET GILI MENO</h4>
+                    <p><strong>Цена:</strong> ~$150/ночь<br>
+                    <strong>Плюсы:</strong> Виллы с собственным бассейном, невероятная тишина, романтика</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.booking.com/hotel/id/ombak-sunset-gili-meno.html" target="_blank" class="action-btn">📅 Booking.com</a>
+                        <a href="https://www.agoda.com/ombak-sunset-gili-meno/hotel/gili-meno-id.html" target="_blank" class="action-btn">🏨 Agoda</a>
+                        <a href="https://goo.gl/maps/OmbakSunset" target="_blank" class="action-btn">🗺️ На карте</a>
+                    </div>
+                </div>
+
+                <h3>⭐⭐⭐⭐⭐ 5 ЗВЕЗД</h3>
+                <div class="card">
+                    <h4> THE OBEROI BEACH RESORT</h4>
+                    <p><strong>Цена:</strong> ~$400/ночь<br>
+                    <strong>Плюсы:</strong> Классика люкса, безупречный сервис, спа</p>
+                    <div style="margin-top: 15px;">
+                        <a href="https://www.booking.com/hotel/id/the-oberoi-lombok.html" target="_blank" class="action-btn">📅 Booking.com</a>
+                        <a href="https://www.oberoihotels.com/hotels-resorts/lombok" target="_blank" class="action-btn">🏨 Официальный сайт</a>
+                        <a href="https://goo.gl/maps/OberoiLombok" target="_blank" class="action-btn">🗺️ На карте</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- МАРШРУТ -->
+            <div class="section" id="route">
+                <h2>📅 ПОШАГОВЫЙ МАРШРУТ (10 ДНЕЙ)</h2>
+                
+                <div class="image-container">
+                    <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?w=800" alt="Gili Islands">
+                    <div class="image-caption">Острова Гили — рай на земле</div>
+                </div>
+
+                <h3>ДЕНЬ 1-2: Прибытие → Сенгиги → Кута</h3>
+                <div class="card">
+                    <ul>
+                        <li>Прилет на Бали → перелет на Ломбок</li>
+                        <li>Заселение в Сенгиги (Qunci Villas)</li>
+                        <li>Переезд в Куту, пляж Tanjung Aan</li>
+                    </ul>
+                </div>
+
+                <h3>ДЕНЬ 3: Розовый пляж!</h3>
+                <div class="card">
+                    <ul>
+                        <li><strong>Pink Beach</strong> — уникальный розовый песок</li>
+                        <li>Selong Belanak — серфинг</li>
+                        <li>Ужин в La Cabana</li>
+                    </ul>
+                </div>
+
+                <h3>ДЕНЬ 4-7: Острова Гили</h3>
+                <div class="card">
+                    <ul>
+                        <li>Паром на Гили Траванган</li>
+                        <li>Экскурсии на Гили Мено и Гили Аир</li>
+                        <li>Снорклинг с черепахами 🐢</li>
+                        <li>Романтические ужины на пляже</li>
+                    </ul>
+                </div>
+
+                <h3>ДЕНЬ 8-9: Водопады и культура</h3>
+                <div class="card">
+                    <ul>
+                        <li>Водопады Tiu Kelep и Sendang Gile</li>
+                        <li>Традиционная деревня Sade</li>
+                        <li>Столица Матаям</li>
+                    </ul>
+                </div>
+
+                <h3>ДЕНЬ 10: Домой</h3>
+                <div class="card">
+                    <p>Ломбок → Бали → Стамбул → Бишкек</p>
+                </div>
+            </div>
+
+            <!-- ЧЕК-ЛИСТ -->
+            <div class="section" id="checklist">
+                <h2>✅ ЧЕК-ЛИСТ ПОДГОТОВКИ</h2>
+                
+                <div class="timeline-section">
+                    <div class="timeline-header"><span>📅</span> За 3 месяца до поездки</div>
+                    <div class="checklist-item"><input type="checkbox" id="c1"><label for="c1">Выбрать отели и забронировать</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c2"><label for="c2">Проверить загранпаспорта (срок > 6 мес)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c3"><label for="c3">Купить авиабилеты (Turkish Airlines)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c4"><label for="c4">Сделать международные водительские права (МВУ)</label></div>
+                </div>
+
+                <div class="timeline-section">
+                    <div class="timeline-header"><span></span> За 1 месяц до поездки</div>
+                    <div class="checklist-item"><input type="checkbox" id="c5"><label for="c5">Оформить страховку (с опцией "Активный отдых")</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c6"><label for="c6">Купить валюту (новые "синие" доллары)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c7"><label for="c7">Записаться к стоматологу</label></div>
+                </div>
+
+                <div class="timeline-section">
+                    <div class="timeline-header"><span>📅</span> За 1 неделю до поездки</div>
+                    <div class="checklist-item"><input type="checkbox" id="c8"><label for="c8">Собрать аптечку (список ниже)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c9"><label for="c9">Скачать офлайн-карты (Maps.me)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c10"><label for="c10">Распечатать брони и страховку</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c11"><label for="c11">Предупредить банк о поездке</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c12"><label for="c12">Сделать фото паспортов и отправить себе</label></div>
+                </div>
+
+                <div class="timeline-section">
+                    <div class="timeline-header"><span>✈️</span> В аэропорту (вылет)</div>
+                    <div class="checklist-item"><input type="checkbox" id="c13"><label for="c13">Онлайн-регистрация на рейс (за 24 часа)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c14"><label for="c14">Распечатать посадочные талоны</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c15"><label for="c15">Проверить вес багажа (макс 20-23 кг)</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c16"><label for="c16">Взять в ручную кладь: лекарства, документы, пауэрбанк</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c17"><label for="c17">Скачать фильмы/сериалы для перелета</label></div>
+                    <div class="checklist-item"><input type="checkbox" id="c18"><label for="c18">Взять пустую бутылку для воды (после контроля)</label></div>
+                </div>
+            </div>
+
+            <!-- ГАСТРОНОМИЯ -->
+            <div class="section" id="food">
+                <h2>🍜 ГАСТРОНОМИЧЕСКИЙ ГИД</h2>
+                
+                <div class="food-grid">
+                    <div class="food-card">
+                        <h4>Nasi Campur</h4>
+                        <p>Рис с набором маленьких порций разных блюд (курица, овощи, самбал). Идеально, чтобы попробовать всё.</p>
+                    </div>
+                    <div class="food-card">
+                        <h4>Ayam Taliwang</h4>
+                        <p>Острая запеченная на углях курица. Фирменное и самое вкусное блюдо именно острова Ломбок.</p>
+                    </div>
+                    <div class="food-card">
+                        <h4>Ikan Bakar</h4>
+                        <p>Свежайшие морепродукты (рыба, кальмары, креветки), приготовленные на гриле с соевым соусом и лаймом.</p>
+                    </div>
+                    <div class="food-card">
+                        <h4>Gado-Gado</h4>
+                        <p>Салат из овощей с арахисовым соусом (веганский, но очень сытный).</p>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <strong>️ ПРАВИЛА БЕЗОПАСНОЙ ЕДЫ:</strong><br>
+                    • Пейте только бутилированную воду<br>
+                    • Ешьте там, где очередь из местных<br>
+                    • Избегайте нарезанных фруктов на прилавке<br>
+                    • Просите "Not spicy", если не любите острое
+                </div>
+            </div>
+
+            <!-- РОМАНТИКА -->
+            <div class="section" id="romantic">
+                <h2>💑 РОМАНТИЧЕСКИЕ ВПЕЧАТЛЕНИЯ</h2>
+                
+                <div class="card">
+                    <h3>🕯️ Приватный ужин на пляже (~$80-150)</h3>
+                    <p><strong>Где:</strong> Gili Meno, Сенгиги<br>
+                    <strong>Что:</strong> Отдельный столик на песке, свечи, вино, сет морепродуктов<br>
+                    <strong>Как:</strong> Написать в отель за 3-5 дней до заезда</p>
+                </div>
+
+                <div class="card">
+                    <h3>🚤 Закатный круиз на приватной лодке (~$50-120)</h3>
+                    <p><strong>Где:</strong> Острова Гили<br>
+                    <strong>Что:</strong> Аренда традиционной лодки (Jukung) на 2-3 часа, фрукты, снорклинг<br>
+                    <strong>Лайфхак:</strong> Берите на 17:00-19:00 — "золотой час" для фото</p>
+                </div>
+
+                <div class="card">
+                    <h3>💆♀️ SPA-ритуал для двоих (~$60-150)</h3>
+                    <p><strong>Что:</strong> Парный массаж, цветочная ванна с лепестками, скрабирование<br>
+                    <strong>Лайфхак:</strong> Ищите "Couple Spa Package" — часто скидка 20-30%</p>
+                </div>
+
+                <div class="card">
+                    <h3>📸 Профессиональная фотосессия (~$100-250)</h3>
+                    <p><strong>Где:</strong> Pink Beach, ворота на пляже, Gili Meno<br>
+                    <strong>Лайфхак:</strong> Договаривайтесь на рассвете (6:30-7:30) — нет туристов, идеальный свет</p>
+                </div>
+            </div>
+
+            <!-- ТРАНСПОРТ -->
+            <div class="section" id="transport">
+                <h2>🚗 ТРАНСПОРТНЫЙ ГИД</h2>
+                
+                <div class="success-box">
+                    <h3>✅ ПОШАГОВАЯ АРЕНДА СКУТЕРА:</h3>
+                    <ol>
+                        <li>Подготовьте: загранпаспорт + национальные права + <strong>МВУ</strong></li>
+                        <li>Арендуйте на месте (~$5-7/день) или через отель</li>
+                        <li>Снимите на видео <strong>каждую царапину</strong> при получении</li>
+                        <li>Проверьте тормоза, фары, уровень бензина</li>
+                        <li>Всегда носите шлем (полиция штрафует!)</li>
+                    </ol>
+                </div>
+
+                <div class="warning-box">
+                    <h3>⛔ КРАСНЫЕ ФЛАГИ:</h3>
+                    <ul>
+                        <li>Просят оставить оригинал загранпаспорта в залог — <strong>НИКОГДА не соглашайтесь!</strong></li>
+                        <li>Страховка "включена", но франшиза $1000+</li>
+                        <li>Навязывают "полную страховку" за двойную цену</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- АПТЕЧКА -->
+            <div class="section" id="medical">
+                <h2>🏥 МЕДИЦИНСКИЙ ГИД И АПТЕЧКА</h2>
+                
+                <h3>📦 СОСТАВ ИДЕАЛЬНОЙ АПТЕЧКИ:</h3>
+                <table>
+                    <thead>
+                        <tr><th>Проблема</th><th>Препарат</th><th>Примечание</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Отравление, диарея</td><td>Энтеросгель / Полисорб</td><td>Сорбенты обязательны!</td></tr>
+                        <tr><td>Кишечная инфекция</td><td>Нифуроксазид (Энтерофурил)</td><td>Кишечный антисептик</td></tr>
+                        <tr><td>Головная боль</td><td>Ибупрофен / Парацетамол</td><td>Универсальное средство</td></tr>
+                        <tr><td>Порезы, ссадины</td><td>Хлоргексидин, пластыри</td><td>Много разных пластырей!</td></tr>
+                        <tr><td>Укачивание</td><td>Драмина</td><td>За 30 мин до лодки</td></tr>
+                        <tr><td>Аллергия</td><td>Цетрин / Лоратадин</td><td>Даже если раньше не было</td></tr>
+                        <tr><td>Укусы комаров</td><td>Репеллент с ДЭТА (DEET)</td><td>В Азии маст-хэв!</td></tr>
+                        <tr><td>Солнечные ожоги</td><td>Пантенол + SPF 50+</td><td>Мажьтесь ДО пляжа</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <h3> АЛГОРИТМ ПРИ СТРАХОВОМ СЛУЧАЕ:</h3>
+                    <ol>
+                        <li><strong>Позвоните в ассистанс</strong> (номер в полисе) ДО визита к врачу</li>
+                        <li>При ДТП вызывайте полицию и требуйте <strong>Police Report</strong></li>
+                        <li>Сохраняйте ВСЕ чеки, выписки, рецепты</li>
+                        <li>Не подписывайте документы на местном языке без перевода</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- ПОЛЕЗНЫЕ ССЫЛКИ -->
+            <div class="section" id="links">
+                <h2>🔗 ПОЛЕЗНЫЕ ССЫЛКИ И РЕСУРСЫ</h2>
+                
+                <h3>✈️ Перелеты и транспорт</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li>✈️ <a href="https://www.turkishairlines.com/" target="_blank"><strong>Turkish Airlines</strong> - бронирование перелетов</a></li>
+                        <li>🛫 <a href="https://www.skyscanner.net/" target="_blank"><strong>Skyscanner</strong> - поиск дешевых авиабилетов</a></li>
+                        <li> <a href="https://www.12go.asia/" target="_blank"><strong>12Go Asia</strong> - билеты на паромы и катера</a></li>
+                        <li>🚗 <a href="https://www.rentalcars.com/" target="_blank"><strong>RentalCars</strong> - аренда авто</a></li>
+                        <li>🏍️ <a href="https://www.booking.com/" target="_blank"><strong>Booking.com</strong> - аренда скутеров через отели</a></li>
+                    </ul>
+                </div>
+
+                <h3>🏨 Отели и жилье</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li> <a href="https://www.booking.com/" target="_blank"><strong>Booking.com</strong> - отели с бесплатной отменой</a></li>
+                        <li>🏡 <a href="https://www.agoda.com/" target="_blank"><strong>Agoda</strong> - часто дешевле для Азии</a></li>
+                        <li>🏠 <a href="https://www.airbnb.com/" target="_blank"><strong>Airbnb</strong> - виллы и апартаменты</a></li>
+                    </ul>
+                </div>
+
+                <h3>🎯 Экскурсии и развлечения</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li>🎯 <a href="https://www.klook.com/" target="_blank"><strong>Klook</strong> - экскурсии, билеты, трансферы</a></li>
+                        <li>🎯 <a href="https://www.getyourguide.com/" target="_blank"><strong>GetYourGuide</strong> - туры и мероприятия</a></li>
+                        <li>🤿 <a href="https://www.viator.com/" target="_blank"><strong>Viator</strong> - дайвинг и водные развлечения</a></li>
+                    </ul>
+                </div>
+
+                <h3>🏥 Страховка и здоровье</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li> <a href="https://www.cherehapa.ru/" target="_blank"><strong>Cherehapa</strong> - сравнение страховок</a></li>
+                        <li>🏥 <a href="https://www.sravni.ru/" target="_blank"><strong>Sravni</strong> - страхование путешествий</a></li>
+                        <li>💊 <a href="https://www.iamtravelmed.com/" target="_blank"><strong>Travel Medicine</strong> - прививки для путешественников</a></li>
+                    </ul>
+                </div>
+
+                <h3> Приложения</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li>📱 <a href="https://grab.com/" target="_blank"><strong>Grab</strong> - такси и еда (скачать)</a></li>
+                        <li>📱 <a href="https://www.gojek.com/" target="_blank"><strong>Gojek</strong> - такси и услуги (скачать)</a></li>
+                        <li>️ <a href="https://maps.me/" target="_blank"><strong>Maps.me</strong> - офлайн карты (скачать)</a></li>
+                        <li>🌐 <a href="https://www.airalo.com/" target="_blank"><strong>Airalo</strong> - eSIM для Индонезии</a></li>
+                        <li> <a href="https://translate.google.com/" target="_blank"><strong>Google Translate</strong> - переводчик</a></li>
+                        <li>💰 <a href="https://wise.com/" target="_blank"><strong>Wise</strong> - выгодный обмен валют</a></li>
+                    </ul>
+                </div>
+
+                <h3>🗺️ Google Maps - ключевые локации</h3>
+                <div class="card">
+                    <h4>Аэропорты и порты:</h4>
+                    <ul class="links-list">
+                        <li>️ <a href="https://goo.gl/maps/LombokAirport" target="_blank">Аэропорт Ломбока (LOP)</a></li>
+                        <li>🛫 <a href="https://goo.gl/maps/BaliAirport" target="_blank">Аэропорт Бали (DPS)</a></li>
+                        <li> <a href="https://goo.gl/maps/BangsalPort" target="_blank">Порт Бангсал (на Гили)</a></li>
+                        <li>🚤 <a href="https://goo.gl/maps/PadangBaiPort" target="_blank">Порт Паданг Бай (Бали)</a></li>
+                    </ul>
+                    
+                    <h4>Пляжи:</h4>
+                    <ul class="links-list">
+                        <li>🏖️ <a href="https://goo.gl/maps/PinkBeachLombok" target="_blank">Pink Beach (Розовый пляж)</a></li>
+                        <li>️ <a href="https://goo.gl/maps/TanjungAan" target="_blank">Tanjung Aan</a></li>
+                        <li>️ <a href="https://goo.gl/maps/SelongBelanak" target="_blank">Selong Belanak</a></li>
+                        <li>️ <a href="https://goo.gl/maps/GiliMenoBeach" target="_blank">Gili Meno Beach</a></li>
+                    </ul>
+                    
+                    <h4>Рестораны:</h4>
+                    <ul class="links-list">
+                        <li>🍽️ <a href="https://goo.gl/maps/LaCabanaLombok" target="_blank">La Cabana (Кута)</a></li>
+                        <li>🍽️ <a href="https://goo.gl/maps/CocanaSunset" target="_blank">Cocana Sunset Club (Гили Т)</a></li>
+                        <li>️ <a href="https://goo.gl/maps/BarefootBeach" target="_blank">Barefoot on the Beach (Гили Аир)</a></li>
+                    </ul>
+                    
+                    <h4>Достопримечательности:</h4>
+                    <ul class="links-list">
+                        <li>🏞️ <a href="https://goo.gl/maps/TiuKelep" target="_blank">Водопад Tiu Kelep</a></li>
+                        <li>️ <a href="https://goo.gl/maps/SendangGile" target="_blank">Водопад Sendang Gile</a></li>
+                        <li>🏛️ <a href="https://goo.gl/maps/SadeVillage" target="_blank">Деревня Sade</a></li>
+                        <li>🏔️ <a href="https://goo.gl/maps/BukitMerese" target="_blank">Bukit Merese (смотрова)</a></li>
+                    </ul>
+                </div>
+
+                <h3>🏥 Медицина и безопасность</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li>🏥 <a href="https://goo.gl/maps/RSUDLombok" target="_blank">RSUD Provinsi NTB (госпиталь)</a></li>
+                        <li>🏥 <a href="https://goo.gl/maps/BaliInternationalMedical" target="_blank">BIMC Hospital (Бали, международный)</a></li>
+                        <li>🚨 <a href="https://goo.gl/maps/PoliceLombok" target="_blank">Полиция Ломбока</a></li>
+                        <li>🏛️ <a href="https://goo.gl/maps/KyrgyzEmbassyJakarta" target="_blank">Посольство КР в Джакарте</a></li>
+                    </ul>
+                </div>
+
+                <h3>💱 Финансы</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li>💱 <a href="https://www.xe.com/" target="_blank">XE Currency - конвертер валют</a></li>
+                        <li> <a href="https://www.numbeo.com/cost-of-living/in/Lombok" target="_blank">Numbeo - цены в Ломбоке</a></li>
+                        <li>🏧 <a href="https://www.atmlocator.com/" target="_blank">Поиск банкоматов</a></li>
+                    </ul>
+                </div>
+
+                <h3>🌤️ Погода</h3>
+                <div class="card">
+                    <ul class="links-list">
+                        <li>🌤️ <a href="https://www.accuweather.com/en/id/mataram/202266/september-weather/202266?year=2026" target="_blank">AccuWeather - Ломбок</a></li>
+                        <li>🌊 <a href="https://www.windy.com/" target="_blank">Windy - прогноз ветра и волн</a></li>
+                        <li>🌅 <a href="https://www.timeanddate.com/sun/indonesia/lombok" target="_blank">TimeAndDate - восход/закат</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- QR КОДЫ -->
+            <div class="section">
+                <h2>📱 QR-КОДЫ ДЛЯ БЫСТРОГО ДОСТУПА</h2>
+                <div class="info-box">
+                    <p><strong>Отсканируйте для быстрого доступа:</strong></p>
+                    <div class="qr-grid">
+                        <div class="qr-card">
+                            <div class="qr-placeholder">
+                                [QR: Google Maps Lombok]
+                            </div>
+                            <strong>Google Maps Ломбок</strong>
+                        </div>
+                        <div class="qr-card">
+                            <div class="qr-placeholder">
+                                [QR: Grab App]
+                            </div>
+                            <strong>Скачать Grab</strong>
+                        </div>
+                        <div class="qr-card">
+                            <div class="qr-placeholder">
+                                [QR: Emergency Contacts]
+                            </div>
+                            <strong>Экстренные контакты</strong>
+                        </div>
+                        <div class="qr-card">
+                            <div class="qr-placeholder">
+                                [QR: Insurance]
+                            </div>
+                            <strong>Страховка</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ИНТЕРАКТИВНАЯ КАРТА -->
+            <div class="section">
+                <h2>🗺️ ИНТЕРАКТИВНАЯ КАРТА МАРШРУТА</h2>
+                <div class="card">
+                    <p>Создайте свою персональную карту с отмеченными локациями:</p>
+                    <ol style="line-height: 2;">
+                        <li>Откройте <a href="https://www.google.com/maps/d/create" target="_blank">Google My Maps</a></li>
+                        <li>Назовите карту "Ломбок Медовый месяц 2026"</li>
+                        <li>Добавьте слои: "Отели", "Рестораны", "Пляжи", "Достопримечательности"</li>
+                        <li>Импортируйте наши координаты или добавьте вручную</li>
+                        <li>Сохраните и откройте в приложении Google Maps на телефоне</li>
+                    </ol>
+                    <div style="margin-top: 20px; text-align: center;">
+                        <a href="https://www.google.com/maps/d/create" target="_blank" class="action-btn">️ Создать карту</a>
+                        <a href="https://drive.google.com/open?id=EXAMPLE_MAP_ID" target="_blank" class="action-btn">📥 Скачать нашу карту</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ШАБЛОНЫ -->
+            <div class="section" id="templates">
+                <h2>️ ШАБЛОНЫ ПИСЕМ В ОТЕЛЬ</h2>
+                <p>Отправьте это письмо за <strong>5-7 дней</strong> до заезда для бесплатного апгрейда!</p>
+                
+                <div class="email-template">
+                    <h3>📝 Шаблон на английском (скопируйте):</h3>
+                    <pre>
+Subject: Honeymoon Stay Request - Booking Reference #[ВАШ НОМЕР]
+
+Dear [НАЗВАНИЕ ОТЕЛЯ] Team,
+
+My wife and I are thrilled to be staying at your beautiful property 
+from [ДАТА ЗАЕЗДА] to [ДАТА ВЫЕЗДА] as part of our honeymoon trip.
+
+If possible, we would be incredibly grateful for a complimentary 
+room upgrade (subject to availability) or a room with a nice view. 
+A late check-out would also be highly appreciated.
+
+Thank you for making our stay special!
+
+Warm regards,
+[ВАШЕ ИМЯ]
+[EMAIL]
+[ТЕЛЕФОН]
+                    </pre>
+                </div>
+            </div>
+
+            <!-- ЛАЙФХАКИ -->
+            <div class="section" id="hacks">
+                <h2>💡 MONEY-SAVING HACKS</h2>
+                
+                <div class="hack-grid">
+                    <div class="hack-card">
+                        <h4><span></span> Правило "Honeymoon"</h4>
+                        <p>Всегда говорите "We are on our honeymoon" при заселении — часто дарят вино, торт или апгрейд</p>
+                    </div>
+                    <div class="hack-card">
+                        <h4><span>📱</span> Местная сим-карта</h4>
+                        <p>В аэропорту симка Telkomsel с 10-15 ГБ стоит ~$10. Не покупайте роуминг!</p>
+                    </div>
+                    <div class="hack-card">
+                        <h4><span>🍜</span> Еда "как местный"</h4>
+                        <p>Самая вкусная еда в варунгах (местных кафе) в 2-3 кварталах от туристической улицы</p>
+                    </div>
+                    <div class="hack-card">
+                        <h4><span>💵</span> Новые купюры</h4>
+                        <p>Меняйте только новые "синие" $100 купюры. Старые могут не принять</p>
+                    </div>
+                    <div class="hack-card">
+                        <h4><span>🤿</span> Снорклинг</h4>
+                        <p>Арендуйте маску и трубку на месте (~$5), не покупайте дома</p>
+                    </div>
+                    <div class="hack-card">
+                        <h4><span>💰</span> Торг</h4>
+                        <p>На рынках и при аренде торгуйтесь! Начинайте с 50% от названной цены</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- КОНТАКТЫ -->
+            <div class="section" id="contacts">
+                <h2>📞 ЭКСТРЕННЫЕ КОНТАКТЫ</h2>
+                
+                <table>
+                    <thead>
+                        <tr><th>Служба</th><th>Номер</th><th>Адрес/Ссылка</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Единый экстренный</td><td>112</td><td>-</td></tr>
+                        <tr><td>Скорая помощь</td><td>118</td><td>-</td></tr>
+                        <tr><td>Полиция</td><td>110</td><td><a href="https://goo.gl/maps/PoliceLombok" target="_blank">На карте</a></td></tr>
+                        <tr><td>RSUD Provinsi NTB</td><td>+62 370 622222</td><td><a href="https://goo.gl/maps/RSUDLombok" target="_blank">Госпиталь</a></td></tr>
+                        <tr><td>BIMC Hospital (Бали)</td><td>+62 361 761263</td><td><a href="https://goo.gl/maps/BaliInternationalMedical" target="_blank">На карте</a></td></tr>
+                        <tr><td>Посольство КР в Джакарте</td><td>+62 21 572 4404</td><td><a href="https://goo.gl/maps/KyrgyzEmbassyJakarta" target="_blank">Адрес</a></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box" style="margin-top: 30px; text-align: center; font-size: 1.1em;">
+                    🚨 <strong>ГЛАВНОЕ ПРАВИЛО:</strong><br>
+                    При любом серьезном происшествии СНАЧАЛА звоните в свою страховую компанию<br>
+                    (номер указан в полисе). Они обязаны организовать и оплатить помощь!
+                </div>
+            </div>
+
+            <!-- РЕЙТИНГ -->
+            <div class="section">
+                <h2> ИТОГОВАЯ ОЦЕНКА ЛОМБОКА</h2>
+                <div class="rating-table">
+                    <div class="rating-row"><span>Пляжи и море</span><span class="rating-score">10/10 🌟</span></div>
+                    <div class="rating-row"><span>Романтика</span><span class="rating-score">9/10 🌟</span></div>
+                    <div class="rating-row"><span>Безопасность</span><span class="rating-score">8/10</span></div>
+                    <div class="rating-row"><span>Кухня</span><span class="rating-score">8/10</span></div>
+                    <div class="rating-row"><span>Стоимость</span><span class="rating-score">9/10</span></div>
+                    <div class="rating-row"><span>Погода в сентябре</span><span class="rating-score">10/10 </span></div>
+                    <div class="rating-row"><span>Интернет</span><span class="rating-score">7/10</span></div>
+                    <div class="rating-row"><span>Развлечения</span><span class="rating-score">7/10</span></div>
+                    <div class="rating-row"><span>Логистика</span><span class="rating-score">6/10</span></div>
+                    <div class="rating-row"><span>ОБЩАЯ ОЦЕНКА</span><span class="rating-score">8.4/10</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ФУТЕР -->
+        <div class="footer">
+            <h2>🎉 СЧАСТЬЯ ВАШЕЙ ПАРЕ!</h2>
+            <p style="font-size: 1.2em; margin: 20px 0;">Пусть ваш медовый месяц на Ломбоке будет незабываемым! 🏝️</p>
+            <button onclick="window.print()" class="action-btn" style="background: white; color: #667eea; margin-top: 20px; font-size: 1.2em; padding: 15px 40px;">
+                🖨️ Сохранить всё в PDF
+            </button>
+            <p style="margin-top: 30px; font-size: 0.9em; opacity: 0.8;">
+                Создано с ❤️ для вашего идеального медового месяца<br>
+                Ломбок и Гили ждут вас! • Сентябрь 2026
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // КАЛЬКУЛЯТОР БЮДЖЕТА
+        function calculateBudget() {
+            const usdToKgs = 87;
+            const days = parseInt(document.getElementById('days').value);
+            const flight = parseInt(document.getElementById('flight').value);
+            const hotelPerNight = parseInt(document.getElementById('hotelPerNight').value);
+            const foodPerDay = parseInt(document.getElementById('foodPerDay').value);
+            const transport = parseInt(document.getElementById('transport').value);
+            const extras = parseInt(document.getElementById('extras').value);
+
+            const hotelTotal = hotelPerNight * days * usdToKgs;
+            const foodTotal = foodPerDay * days * usdToKgs;
+            const transportTotal = transport * usdToKgs;
+            const extrasTotal = extras * usdToKgs;
+            const total = flight + hotelTotal + foodTotal + transportTotal + extrasTotal;
+
+            let status = '';
+            let statusClass = '';
+            if (total <= 290000) {
+                status = '🎉 Отлично! Вы укладываетесь в бюджет 290 000 сом!';
+                statusClass = 'success-box';
+            } else if (total <= 320000) {
+                status = '⚠️ Чуть выше бюджета. Попробуйте снизить категорию отеля.';
+                statusClass = 'warning-box';
+            } else {
+                status = '❌ Значительно выше бюджета. Требуется пересмотр плана.';
+                statusClass = 'warning-box';
+            }
+
+            document.getElementById('resultDetails').innerHTML = `
+                <div style="margin: 10px 0; padding: 8px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Перелет:</strong> ${flight.toLocaleString()} сом
+                </div>
+                <div style="margin: 10px 0; padding: 8px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Проживание:</strong> ${hotelTotal.toLocaleString()} сом
+                </div>
+                <div style="margin: 10px 0; padding: 8px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Питание:</strong> ${foodTotal.toLocaleString()} сом
+                </div>
+                <div style="margin: 10px 0; padding: 8px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Транспорт:</strong> ${transportTotal.toLocaleString()} сом
+                </div>
+                <div style="margin: 10px 0; padding: 8px; background: #f8f9fa; border-radius: 5px;">
+                    <strong>Доп. расходы:</strong> ${extrasTotal.toLocaleString()} сом
+                </div>
+            `;
+
+            document.getElementById('totalResult').innerHTML = `
+                <div style="font-size: 1.5em; margin-bottom: 10px;">
+                    <strong>ИТОГО: ${total.toLocaleString()} сом</strong>
+                </div>
+                <div class="${statusClass}" style="margin: 0; text-align: center;">
+                    ${status}
+                </div>
+            `;
+
+            document.getElementById('resultBox').style.display = 'block';
+            document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // ПЛАВНАЯ ПРОКРУТКА
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
